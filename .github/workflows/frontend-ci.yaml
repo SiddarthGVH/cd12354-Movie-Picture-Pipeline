@@ -67,7 +67,7 @@ jobs:
 
       - name: Run tests
         working-directory: ${{ env.FRONTEND_DIR }}
-        run: CI=true npm test
+        run: FAIL_TEST=1 CI=true npm test
 
   build:
     name: Build
@@ -96,7 +96,7 @@ jobs:
 
       - name: Run tests
         working-directory: ${{ env.FRONTEND_DIR }}
-        run: FAIL_TEST=1 CI=true npm test
+        run: CI=true npm test
 
       - name: Build Docker image
         working-directory: ${{ env.FRONTEND_DIR }}
