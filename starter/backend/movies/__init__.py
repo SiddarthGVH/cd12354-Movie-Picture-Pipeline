@@ -1,4 +1,4 @@
-# backend trivial change 
+# backend trivial change
 from flask import Blueprint
 from .resources import Movies
 
